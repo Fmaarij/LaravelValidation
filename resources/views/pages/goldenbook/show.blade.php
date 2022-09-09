@@ -18,9 +18,10 @@
                 <p>
                    Image:
                 </p>
-                <p>{{$dbgoldenbook->A_img}}</p>
+                <img width="7%" src="{{asset('storage/img/'.$dbgoldenbook->src)}}" alt="">
+                 <p>name src : {{$dbgoldenbook->src}}</p>
             </div>
         </div>
     </div>
 @endsection
-<textarea name="" id="" cols="30" rows="10"></textarea>
+

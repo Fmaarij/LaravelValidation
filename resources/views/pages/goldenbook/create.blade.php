@@ -55,7 +55,7 @@
                         <label>
                             Image:
                         </label>
-                        <input type="file" name="A_img">
+                        <input type="file" name="img">
                     </div>
 
                     <div>

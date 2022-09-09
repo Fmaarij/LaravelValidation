@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('A_nom');
             $table->text('A_text');
             $table->integer('A_note');
-            $table->text('A_img');
+            $table->text('src');
             $table->timestamps();
         });
     }

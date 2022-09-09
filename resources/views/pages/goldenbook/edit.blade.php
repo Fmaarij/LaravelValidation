@@ -44,7 +44,9 @@
                         <label>
                             Image:
                         </label>
-                        <input type="file" name="A_img" value="{{$dbgoldenbook->A_img }}">
+                        <input type="file" name="src" value="{{$dbgoldenbook->src }}">
+
+                        <img width="5%" src="{{asset('storage/img/'.$dbgoldenbook->src)}}" alt="">
                     </div>
 
                     <div>

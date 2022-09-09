@@ -53,12 +53,12 @@ class GoldenbookController extends Controller
             'A_note.required' => ' Entre 1 et 5'
         ]);
 
+        Storage::put('public/img/', $request->file('img'));
         $dbgoldenbook = new Goldenbook;
         $dbgoldenbook->A_nom=$request->A_nom;
         $dbgoldenbook->A_text=$request->A_text;
         $dbgoldenbook->A_note=$request->A_note;
 
-        Storage::put('public/img/', $request->file('img'));
 
         // $img = new File();
         $dbgoldenbook->src = $request->file('img')->hashName();
@@ -114,10 +114,12 @@ class GoldenbookController extends Controller
             'A_text.required' => ' Faut max 300 caractères',
             'A_note.required' => ' Entre 1 et 5'
         ]);
+        // Storage::put('public/img/', $request->file('img'));
         $dbgoldenbook = Goldenbook::find($id);
         $dbgoldenbook->A_nom=$request->A_nom;
         $dbgoldenbook->A_text=$request->A_text;
         $dbgoldenbook->A_note=$request->A_note;
+        // $dbgoldenbook->src = $request->file('img')->hashName();
         $dbgoldenbook->save();
         return redirect('/');
     }

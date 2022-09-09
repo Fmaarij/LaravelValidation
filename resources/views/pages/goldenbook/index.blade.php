@@ -24,7 +24,10 @@
                 <p>
                     Image:
                 </p>
-                <img src="{{asset(/img/ .$file->src)}}">
+
+                <img width="15%" src="{{asset('storage/img/'.$item->src)}}" alt="">
+                 <p>name src : {{$item->src}}</p>
+                {{-- <img src="storage/img/{{$dbgoldenbook->src}}" alt=""> --}}
 
                 <a href="/show/{{$item->id}}">
                     <button class="btn btn-primary">Afficher</button>
